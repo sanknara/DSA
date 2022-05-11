@@ -1,3 +1,31 @@
+/**
+ * The Custom LRU cache of integers which extends the collection - LinkedHashMap to remove the least recently accessed value.
+ */
+// class LRUCache extends LinkedHashMap<Integer, Integer>{
+//     private int capacity;
+    
+//     public LRUCache(int capacity) {
+//         super(capacity, 0.75F, true);
+//         this.capacity = capacity;
+//     }
+
+//     public int get(int key) {
+//         return super.getOrDefault(key, -1);
+//     }
+
+//     public void put(int key, int value) {
+//         super.put(key, value);
+//     }
+
+//     @Override
+//     protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+//         return size() > capacity; 
+//     }
+// }
+
+/**
+ * The Custom LRU cache of integers implemented using the data structures : DoublyLinkedList(DLL) and HashMap.
+ */
 class LRUCache {
 
     // Add node method to insert the doubly linked list node
@@ -55,7 +83,7 @@ class LRUCache {
     }
 
     //LRU cache -> Least Recently Used Cache -> supports get,put operations based on allocated capacity, if reaches maximum capacity,cache should remove the least accessed object and insert the latest one. 
-    // Map -> To perform and get operation in O(1)
+    // Map -> To perform put and get operation in O(1)
     private Map<Integer, DLinkedNode> cache = new HashMap<>();
     // Doubly Linked List -> To perform delete/remove operation in O(1)
     private DLinkedNode head, tail;
