@@ -142,7 +142,7 @@ class LRUCache {
             }
 
 
-        }else{
+        } else{
             // just update the node value
             node.value = value;
             // move the node to head as its new value to be inserted
